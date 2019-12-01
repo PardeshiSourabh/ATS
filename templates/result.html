@@ -1,0 +1,7 @@
+{% extends "layout.html" %}
+{% block content %}
+<h3> Analysis Results </h3>
+{% for score in cal.ret() %}
+    <h5>{{ score }}<h5>
+{% endfor %}
+{% endblock content %}

@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<h4> Analysis Results using LDA topic modeling & Cosine similarity metric <h4>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <hr>
+            <form action="/result" method="POST" enctype="multipart/form-data">
+
+                <div class="form-group">
+                    <label>Paste resume contents here</label>
+                    <div class="custom-file">
+                        <textarea name="resume" rows="10" cols="50"></textarea>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Paste Job Description here</label>
+                    <div class="custom-file">
+                        <textarea name="jobdesc" rows="10" cols="50"></textarea>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">
+                    Analyze
+                </button>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% block content %}
+<h3>Job Description Based Candidate Pertinence Analysis</h3>
+<p>
+	Given the large amount of job postings all over the web, applicants are left confused about the fact that whether their previous academic/work experience or skill-set aligns with the posted job or not. Identifying the abundance of skill & technology requirements proposed by the job recruiters and verifying our own eligibility could be a strenuous task. This system will eliminate this issue and will be helpful for identifying and recommending the right job for every applicant seeking the perfect job based on their portfolio.
+</p>
+<form action="/analyze" method="POST">
+	<button type="submit" class="btn btn-primary">
+		GET STARTED!
+	</button>
+{% endblock content %}
