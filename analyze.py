@@ -2,6 +2,7 @@ import warnings
 warnings.filterwarnings(action='ignore', category=UserWarning, module='gensim')
 
 from collections import Counter
+import json
 
 import gensim
 from gensim.utils import simple_preprocess
@@ -54,6 +55,6 @@ class Analyze():
         words = [w for w in words if not w in stop_words]
         ngram_counts = Counter(ngrams(words, 1))
         results = [ {'keyword': str(tup[0][0]), 'freq': str(tup[1])} for tup in ngram_counts.most_common(15) ]
-        return results
+        return json.dumps(results)
 
 
