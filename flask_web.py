@@ -46,8 +46,9 @@ def analyze():
 def result():
     resume = request.form['resume']
     jobdesc = request.form['jobdesc']
-    results = Analyze(resume, jobdesc)
-    return render_template('result.html', title="Results", results=results.metrics())
+    analysis = Analyze(resume, jobdesc)
+    results = analysis.metrics()
+    return render_template('result.html', title="Results", results=results)
 
 
 if __name__ == '__main__':

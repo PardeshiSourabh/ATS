@@ -1,5 +1,7 @@
 {% extends "layout.html" %}
 {% block content %}
 <h3> Analysis Results </h3>
-    <h4> Top 15 Most Frequent Keywords based on the job description: {{ results }} </h4>
+{% for item in results %}
+    <h4> Keyword {{ item.keyword }} appears {{ item.freq }} times in the job description. </h4>
+{% end for %}
 {% endblock content %}

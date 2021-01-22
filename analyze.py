@@ -2,7 +2,6 @@ import warnings
 warnings.filterwarnings(action='ignore', category=UserWarning, module='gensim')
 
 from collections import Counter
-import json
 
 import gensim
 from gensim.utils import simple_preprocess
@@ -18,6 +17,18 @@ from flask_wtf import FlaskForm
 
 from wtforms import StringField
 from wtforms.validators import DataRequired
+
+
+# stop_words = set(["i", "me", "my", "myself", "we", "our", "ours", "ourselves", "you", "your", "yours",
+# "yourself", "yourselves", "he", "him", "his", "himself", "she", "her", "hers", "herself",
+# "it", "its", "itself", "they", "them", "their", "theirs", "themselves", "what", "which", "who",
+# "whom", "this", "that", "these", "those", "am", "is", "are", "was", "were", "be", "been", "being",
+# "have", "has", "had", "having", "do", "does", "did", "doing", "a", "an", "the", "and", "but", "if", "or",
+# "because", "as", "until", "while", "of", "at", "by", "for", "with", "about", "against", "between", "into",
+# "through", "during", "before", "after", "above", "below", "to", "from", "up", "down", "in", "out", "on", "off",
+# "over", "under", "again", "further", "then", "once", "here", "there", "when", "where", "why", "how", "all", "any",
+# "both", "each", "few", "more", "most", "other", "some", "such", "no", "nor", "not", "only", "own", "same", "so",
+# "than", "too", "very", "s", "t", "can", "will", "just", "don", "should", "now"])
 
 
 class Analyze():
@@ -55,6 +66,6 @@ class Analyze():
         words = [w for w in words if not w in stop_words]
         ngram_counts = Counter(ngrams(words, 1))
         results = [ {'keyword': str(tup[0][0]), 'freq': str(tup[1])} for tup in ngram_counts.most_common(15) ]
-        return json.dumps(results)
+        return results
 
 
