@@ -2,6 +2,6 @@
 {% block content %}
 <h3> Analysis Results </h3>
     {% for item in results.metrics() %}
-        <h4> Keyword: {{ item['keyword'] }} appears {{ item['freq'] }} times in the job description. </h4>
+        <h4> Keyword: {{ item.keyword }} appears {{ item.freq }} times in the job description. </h4>
     {% endfor %}
 {% endblock content %}
