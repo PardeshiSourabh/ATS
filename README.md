@@ -1,4 +1,4 @@
-# Resume Analyzing System using LDA Topic Modeling
+# Applicant Tracking System using LDA Topic Modeling
 
 ## Introduction
 The system uses a pre-trained gensim LDA model on [Kaggle](https://www.kaggle.com/madhab/jobposts "this") dataset. It uses a Python/Flask backend to interact with it's web interface. The demo is available [Demo Link](https://resumeanalyzer.herokuapp.com "here").
