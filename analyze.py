@@ -53,7 +53,7 @@ class Analyze():
         words = [word for word in filtered if word.isalpha()]
         words = [w for w in words if not w in stop_words]
         ngram_counts = Counter(ngrams(words, 1))
-        results = { tup[0][0]:tup[1] for tup in ngram_counts.most_common(15) }
+        results = [ {'keyword': tup[0][0], 'freq': tup[1]} for tup in ngram_counts.most_common(15) ]
         return results
 
 
