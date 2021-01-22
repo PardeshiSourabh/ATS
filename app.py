@@ -1,6 +1,6 @@
 from flask import Flask, render_template, url_for, flash, redirect, request
 from form import Registration, LoginForm
-from calculate import Calculate
+from analyze import Analyze
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = '0332dde67326bc2e'
@@ -46,9 +46,9 @@ def analyze():
 def result():
     resume = request.form['resume']
     jobdesc = request.form['jobdesc']
-    cal = Calculate(resume, jobdesc)
+    analysis = Analyze(resume, jobdesc)
 
-    return render_template('result.html', title="Results", cal=cal)
+    return render_template('result.html', title="Results", analysis=analysis)
 
 
 if __name__ == '__main__':
