@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 {% block content %}
 <h3> Analysis Results </h3>
-{% for keyword, freq in analysis.metrics() %}
+{% for keyword, freq in results.items() %}
     <h5>Keyword: {{ keyword }} appears {{ freq }} times in the job description.</h5>
 {% endfor %}
 {% endblock content %}
