@@ -3,10 +3,10 @@ warnings.filterwarnings(action='ignore', category=UserWarning, module='gensim')
 
 from collections import Counter
 
-import gensim
-from gensim.utils import simple_preprocess
-from gensim.parsing.preprocessing import STOPWORDS
-from gensim import models, corpora
+# import gensim
+# from gensim.utils import simple_preprocess
+# from gensim.parsing.preprocessing import STOPWORDS
+# from gensim import models, corpora
 
 from nltk.stem import WordNetLemmatizer, SnowballStemmer
 from nltk import ngrams, RegexpTokenizer

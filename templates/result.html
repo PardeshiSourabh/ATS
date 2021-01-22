@@ -1,7 +1,18 @@
 {% extends "layout.html" %}
 {% block content %}
-<h3> Analysis Results </h3>
+<h3> Analysis Results: Most Frequent Keywords </h3>
+
+<table>
+    <tr>
+      <th>Keyword</th>
+      <th>Frequency</th>
+    </tr>
 {% for item in results %}
-    <h4> Keyword {{ item.keyword }} appears {{ item.freq }} times in the job description. </h4>
-{% end for %}
+    <tr>
+        <td>{{ item.keyword }}</td>
+        <td>{{ item.freq }}</td>
+    </tr>
+{% endfor %}
+</table>
+
 {% endblock content %}
