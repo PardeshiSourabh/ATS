@@ -3,7 +3,6 @@ from form import Registration, LoginForm
 from analyze import Analyze
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = '0332dde67326bc2e'
 app.config['JSON_AS_ASCII'] = False
 
 

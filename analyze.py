@@ -9,7 +9,7 @@ from gensim.parsing.preprocessing import STOPWORDS
 from gensim import models, corpora
 
 from nltk.stem import WordNetLemmatizer, SnowballStemmer
-from nltk import  ngrams, RegexpTokenizer
+from nltk import ngrams, RegexpTokenizer
 from nltk.corpus import stopwords
 
 from flask import request

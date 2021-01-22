@@ -1,4 +1,2 @@
 wordnet
-corpus
-RegexpTokenizer
-ngrams
+stopwords
